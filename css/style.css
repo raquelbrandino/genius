@@ -1,11 +1,11 @@
 body{
+    background-color: black;
     margin: 0;
     padding: 0;
 }
 
 header{
     align-items: center;
-    background-color: black;
     height: 6vh;
     justify-content: center;
     width: 100vw;
@@ -19,19 +19,32 @@ header h1{
 }
 
 nav{
-    background-color: rgba(2, 2, 2, 0.973);
+    align-items: flex-end;
     color: white;
-    height: 6vh;
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    text-align: -webkit-center;
     width: 100vw;
+}
+
+nav p button{
+    background-color: white;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 28px;
+    height: 1.4rem;
+    size: 3rem;
+    width: 7rem;
 }
 
 section{
     align-content: center;
-    background-color:  rgba(2, 2, 2, 0.973);
     display: grid;
     grid-template-areas: 'azul vermelho'
                          'amarelo verde';
-    height: 70vh;
+    height: 79vh;
     justify-content: center;
     width: 100vw;
 }
@@ -68,7 +81,10 @@ section div button{
 }
 
 footer{
-    background-color: blue;
-    height: 8vh;
+    background-color: rgb(5, 5, 133);
+    color: white;
+    font-size: 1.5rem;
+    height: 5vh;
+    text-align: center;
     width: 100vw;
 }
