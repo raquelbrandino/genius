@@ -2,6 +2,7 @@ body{
     background-color: black;
     margin: 0;
     padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 header{
@@ -16,6 +17,7 @@ header h1{
     margin-block-start: 0;
     margin-block-end: 0;
     text-align: center;
+    font-family: 'Alfa Slab One', cursive;
 }
 
 nav{
@@ -39,6 +41,32 @@ nav p button{
     width: 7rem;
 }
 
+nav p button:hover{
+    cursor: pointer;
+}
+
+.visor{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+#contadorDoTempo{
+    height: 3vh;
+    width: 6vw;
+    background-color: white;
+    /* optei por deixar o background color por enquanto para facilitar na hora de implantar a lógica do jogo */
+}
+
+#nivelDoJogo{
+    height: 3vh;
+    width: 6vw;
+    background-color: white;
+    /* optei por deixar o background color por enquanto para facilitar na hora de implantar a lógica do jogo */
+}
+
+
 section{
     align-content: center;
     display: grid;
@@ -53,7 +81,13 @@ section div button{
     height: 10rem;
     width: 10rem;
     border-bottom: 0px;
-    border: solid;
+    border: solid;    
+}
+
+section div button span{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #azul{
@@ -62,10 +96,22 @@ section div button{
     border-top-left-radius: 160px;
 }
 
+#azul:hover{
+    cursor: pointer;
+    border: 5px dotted white;
+    border-top-left-radius: 150px;
+}
+
 #vermelho{
     grid-area: vermelho;
     background-color: rgba(218, 2, 2, 0.897);
     border-top-right-radius: 160px;
+}
+
+#vermelho:hover{
+    cursor: pointer;
+    border: 5px dotted white;
+    border-top-right-radius: 150px;
 }
 
 #amarelo{
@@ -74,10 +120,22 @@ section div button{
     border-bottom-right-radius: 160px;
 }
 
+#amarelo:hover{
+    cursor: pointer;
+    border: 5px dotted white;
+    border-bottom-right-radius: 150px;
+}
+
 #verde{
     grid-area: verde;
     background-color: rgb(0, 104, 0);
     border-bottom-left-radius: 160px;
+}
+
+#verde:hover{
+    cursor: pointer;
+    border: 5px dotted white;
+    border-bottom-left-radius: 150px;
 }
 
 footer{
@@ -87,4 +145,5 @@ footer{
     height: 5vh;
     text-align: center;
     width: 100vw;
+    margin-top: -4vh;
 }
