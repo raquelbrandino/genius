@@ -97,6 +97,7 @@ section div button span{
 }
 
 #azul:hover{
+    background-color: rgba(82, 92, 243, 0.788);
     cursor: pointer;
     border: 5px dotted white;
     border-top-left-radius: 150px;
@@ -109,6 +110,7 @@ section div button span{
 }
 
 #vermelho:hover{
+    background-color: rgba(248, 71, 71, 0.897);
     cursor: pointer;
     border: 5px dotted white;
     border-top-right-radius: 150px;
@@ -121,6 +123,7 @@ section div button span{
 }
 
 #amarelo:hover{
+    background-color: rgb(240, 240, 100);
     cursor: pointer;
     border: 5px dotted white;
     border-bottom-right-radius: 150px;
@@ -133,6 +136,7 @@ section div button span{
 }
 
 #verde:hover{
+    background-color: rgb(67, 252, 67);
     cursor: pointer;
     border: 5px dotted white;
     border-bottom-left-radius: 150px;
