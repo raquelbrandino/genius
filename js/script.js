@@ -1,11 +1,23 @@
-let Botaoazul = document.querySelector('#azul');
-let Botaovermelho = document.querySelector('#vermelho');
-let Botaoverde = document.querySelector('#verde');
-let Botaoamarelo = document.querySelector('#amarelo');
+let botaoAzul = document.querySelector('#azul');
+let botaoVermelho = document.querySelector('#vermelho');
+let botaoVerde = document.querySelector('#verde');
+let botaoAmarelo = document.querySelector('#amarelo');
 
-let TodosBotoes = [Botaoazul, Botaovermelho, Botaoverde, Botaoamarelo]
+let todosBotoes = [botaoAmarelo, botaoAzul, botaoVerde, botaoVermelho];
 
-function(TodosBotoes){
+
+function criarSequencia(todosBotoes) {
   
+  let valor_temporario;
+  let indice_aleatorio;
 
-}
+  for (let i = todosBotoes.length - 1; i !== 0; i--) {
+    indice_aleatorio = Math.floor(Math.random() * i);
+
+    valor_temporario = todosBotoes[i];
+    todosBotoes[i] = todosBotoes[indice_aleatorio];
+    todosBotoes[indice_aleatorio] = valor_temporario;
+  }
+  return todosBotoes;
+};
+
