@@ -1,31 +1,88 @@
-let botaoAzul = document.querySelector('#azul');
-let botaoVermelho = document.querySelector('#vermelho');
-let botaoVerde = document.querySelector('#verde');
-let botaoAmarelo = document.querySelector('#amarelo');
+let azul = document.querySelector('#azul');
+let vermelho = document.querySelector('#vermelho');
+let verde = document.querySelector('#verde');
+let amarelo = document.querySelector('#amarelo');
 
-let todosBotoes = [botaoAmarelo, botaoAzul, botaoVerde, botaoVermelho];
+ordem = [];
+ordemClicada = [];
 
+let gerarOrdem =( ) =>{
+  proximo = Math.floor(Math.random() * 4);
+  ordem[ordem.length] = proximo;
+  ordemClicada = [];
+  for(let i in ordem){
+    let elementoDiv = elemento(ordem[i]);
+    acender(elementoDiv, Number(i) + 1);
+  };
+};
 
-function criarSequencia(todosBotoes) {
-  
-  let valor_temporario;
-  let indice_aleatorio;
-
-  for (let i = todosBotoes.length - 1; i !== 0; i--) {
-    indice_aleatorio = Math.floor(Math.random() * i);
-
-    valor_temporario = todosBotoes[i];
-    todosBotoes[i] = todosBotoes[indice_aleatorio];
-    todosBotoes[indice_aleatorio] = valor_temporario;
+let compararOrdem = ()=>{
+  for(let i in ordemClicada){
+      if(ordemClicada[i] != ordem[i]){
+        perdeu();
+        break;
+      }
+  };
+  if(ordemClicada.length == ordem.length){
+    alert("Parabens! Vamos continua!");
+    proximo();
   }
-  return todosBotoes;
 };
 
-let acenderBotao = setTimeout(function acender(){
-  todosBotoes.classList.add('acenderSequencia');
-}, 3000);
+let clicou = (cor) =>{
+  ordemClicada[ordemClicada.length] = cor;
+  elemento(cor).classList.add('selecionado');
+  setTimeout(()=>{
+    elemento(cor).classList.remove('selecionado');
+    compararOrdem();
+  }, 250);
+}
 
-for( botao of todosBotoes){
-  let sequencia = todosBotoes[botao];
-  acenderBotao = sequencia;
+let elemento = (cor) =>{
+  if(cor == 0){
+    return verde;
+  }
+  else if (cor == 1){
+    return vermelho;
+  }
+  else if (cor == 2){
+    return amarelo;
+  }
+  else if (cor == 3){
+    return azul;
+  }
 };
+
+let proximo = () =>{
+  gerarOrdem();
+};
+
+let perdeu = () => {
+  alert('Não foi dessa vez, tente novamente.');
+  ordem = [];
+  ordemClicada = [];
+  iniciar();
+}
+let iniciar = () => {
+  alert('Seja Bem vindo!, Vamos começar!');
+  proximo();
+}
+let acender = (elementoDiv, tempo) => {
+  let tempo = tempo * 500;
+  setTimeout(()=>{
+    elementoDiv.classList.add("acenderSequencia");
+  }, tempo - 250);
+  setTimeout(()=>{
+    elementoDiv.classList.remove("acenderSequencia");
+  }, tempo);
+
+}
+
+// let acenderBotao = setTimeout(function acender(){
+//   todosBotoes.classList.add("acenderSequencia");
+// }, 3000);
+
+// for( botao of todosBotoes){
+//   let sequencia = todosBotoes[botao];
+//   acenderBotao = sequencia;
+// };
