@@ -135,6 +135,10 @@ section div button span{
     border-bottom-left-radius: 160px;
 }
 
+.acenderSequencia{
+    opacity: 0.5;
+}
+
 #verde:hover{
     background-color: rgb(67, 252, 67);
     cursor: pointer;

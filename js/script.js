@@ -21,3 +21,11 @@ function criarSequencia(todosBotoes) {
   return todosBotoes;
 };
 
+let acenderBotao = setTimeout(function acender(){
+  todosBotoes.classList.add('acenderSequencia');
+}, 3000);
+
+for( botao of todosBotoes){
+  let sequencia = todosBotoes[botao];
+  acenderBotao = sequencia;
+};
