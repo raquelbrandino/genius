@@ -90,46 +90,46 @@ section div button span{
     font-weight: bold;
 }
 
-#azul{
+.azul{
     grid-area: azul;
     background-color: rgba(0, 17, 255, 0.788);
     border-top-left-radius: 160px;
 }
 
-#azul:hover{
+.azul:hover{
     background-color: rgba(82, 92, 243, 0.788);
     cursor: pointer;
     border: 5px dotted white;
     border-top-left-radius: 150px;
 }
 
-#vermelho{
+.vermelho{
     grid-area: vermelho;
     background-color: rgba(218, 2, 2, 0.897);
     border-top-right-radius: 160px;
 }
 
-#vermelho:hover{
+.vermelho:hover{
     background-color: rgba(248, 71, 71, 0.897);
     cursor: pointer;
     border: 5px dotted white;
     border-top-right-radius: 150px;
 }
 
-#amarelo{
+.amarelo{
     grid-area: amarelo;
     background-color: rgb(219, 219, 0);
     border-bottom-right-radius: 160px;
 }
 
-#amarelo:hover{
+.amarelo:hover{
     background-color: rgb(240, 240, 100);
     cursor: pointer;
     border: 5px dotted white;
     border-bottom-right-radius: 150px;
 }
 
-#verde{
+.verde{
     grid-area: verde;
     background-color: rgb(0, 104, 0);
     border-bottom-left-radius: 160px;
@@ -139,7 +139,7 @@ section div button span{
     opacity: 0.5;
 }
 
-#verde:hover{
+.verde:hover{
     background-color: rgb(67, 252, 67);
     cursor: pointer;
     border: 5px dotted white;

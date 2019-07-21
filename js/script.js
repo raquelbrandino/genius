@@ -1,7 +1,7 @@
-let azul = document.querySelector('#azul');
-let vermelho = document.querySelector('#vermelho');
-let verde = document.querySelector('#verde');
-let amarelo = document.querySelector('#amarelo');
+let azul = document.querySelector('.azul');
+let vermelho = document.querySelector('.vermelho');
+let verde = document.querySelector('.verde');
+let amarelo = document.querySelector('.amarelo');
 
 ordem = [];
 ordemClicada = [];
@@ -15,6 +15,17 @@ let gerarOrdem =( ) =>{
     acender(elementoDiv, Number(i) + 1);
   };
 };
+
+let acender = (elementoDiv, tempo) => {
+  let tempo = tempo * 500;
+  setTimeout(()=>{
+    elementoDiv.classList.add("acenderSequencia");
+  }, tempo - 250);
+  setTimeout(()=>{
+    elementoDiv.classList.remove("acenderSequencia");
+  }, tempo);
+
+}
 
 let compararOrdem = ()=>{
   for(let i in ordemClicada){
@@ -67,22 +78,12 @@ let iniciar = () => {
   alert('Seja Bem vindo!, Vamos começar!');
   proximo();
 }
-let acender = (elementoDiv, tempo) => {
-  let tempo = tempo * 500;
-  setTimeout(()=>{
-    elementoDiv.classList.add("acenderSequencia");
-  }, tempo - 250);
-  setTimeout(()=>{
-    elementoDiv.classList.remove("acenderSequencia");
-  }, tempo);
 
-}
+verde.onclick = () => clicou(0);
+vermelho.onclick = () => clicou(1);
+amarelo.onclick = () => clicou(2);
+azul.onclick = () => clicou(3);
+iniciar();
 
-// let acenderBotao = setTimeout(function acender(){
-//   todosBotoes.classList.add("acenderSequencia");
-// }, 3000);
 
-// for( botao of todosBotoes){
-//   let sequencia = todosBotoes[botao];
-//   acenderBotao = sequencia;
-// };
+
