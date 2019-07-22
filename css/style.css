@@ -56,7 +56,6 @@ nav p button:hover{
     height: 3vh;
     width: 6vw;
     font-size: 0.8rem;
-    /* optei por deixar o background color por enquanto para facilitar na hora de implantar a lógica do jogo */
 }
 
 #nivelDoJogo{

@@ -70,12 +70,12 @@ let perdeu = () => {
   ordemClicada = [];
   iniciar();
 }
+
 let iniciar = () => {
-  alert('Seja bem-vindo! Vamos começar!');
   gerarOrdem();
 }
 
-function contadorTempo(op) {
+function contadorTempo() {
 	let s = 1;
 	let m = 0;
   let h = 0;
@@ -83,16 +83,18 @@ function contadorTempo(op) {
 	intervalo = window.setInterval(function() {
 		if (s == 60) { m++; s = 0; }
 		if (m == 60) { h++; s = 0; m = 0; }
-		if (h < 10) document.getElementById("hora").innerHTML = "0" + h + "h"; else document.getElementById("hora").innerHTML = h + "h";
-		if (s < 10) document.getElementById("segundo").innerHTML = "0" + s + "s"; else document.getElementById("segundo").innerHTML = s + "s";
-		if (m < 10) document.getElementById("minuto").innerHTML = "0" + m + "m"; else document.getElementById("minuto").innerHTML = m + "m";		
+    if (h < 10) document.getElementById("hora").innerHTML = "0" + h + "h"; 
+    else document.getElementById("hora").innerHTML = h + "h";
+    if (s < 10) document.getElementById("segundo").innerHTML = "0" + s + "s"; 
+    else document.getElementById("segundo").innerHTML = s + "s";
+    if (m < 10) document.getElementById("minuto").innerHTML = "0" + m + "m"; 
+    else document.getElementById("minuto").innerHTML = m + "m";		
 		s++;
 	},1000);
 }
 
-window.onload = contadorTempo();
+
 verde.onclick = () => clicou(0);
 vermelho.onclick = () => clicou(1);
 amarelo.onclick = () => clicou(2);
 azul.onclick = () => clicou(3);
-iniciar();
