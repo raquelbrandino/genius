@@ -68,7 +68,6 @@ let perdeu = () => {
   alert('Não foi dessa vez, tente novamente.');
   ordem = [];
   ordemClicada = [];
-  iniciar();
 }
 
 let iniciar = () => {
@@ -93,6 +92,10 @@ function contadorTempo() {
 	},1000);
 }
 
+function parar(){
+alert('Obrigada por jogar conosco!')
+window.location.reload()
+}
 
 verde.onclick = () => clicou(0);
 vermelho.onclick = () => clicou(1);
