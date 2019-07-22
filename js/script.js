@@ -17,7 +17,7 @@ let gerarOrdem =( ) =>{
 };
 
 let acender = (elementoDiv, tempo) => {
-  let tempo = tempo * 500;
+  tempo = tempo * 1000;
   setTimeout(()=>{
     elementoDiv.classList.add("acenderSequencia");
   }, tempo - 250);
@@ -36,7 +36,7 @@ let compararOrdem = ()=>{
   };
   if(ordemClicada.length == ordem.length){
     alert("Parabens! Vamos continua!");
-    proximo();
+    gerarOrdem();
   }
 };
 
@@ -64,10 +64,6 @@ let elemento = (cor) =>{
   }
 };
 
-let proximo = () =>{
-  gerarOrdem();
-};
-
 let perdeu = () => {
   alert('Não foi dessa vez, tente novamente.');
   ordem = [];
@@ -76,7 +72,7 @@ let perdeu = () => {
 }
 let iniciar = () => {
   alert('Seja Bem vindo!, Vamos começar!');
-  proximo();
+  gerarOrdem();
 }
 
 verde.onclick = () => clicou(0);
