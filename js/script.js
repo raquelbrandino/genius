@@ -35,7 +35,7 @@ let compararOrdem = ()=>{
       }
   };
   if(ordemClicada.length == ordem.length){
-    alert("Parabens! Vamos continua!");
+    alert("Parabéns! Vamos continuar!");
     gerarOrdem();
   }
 };
@@ -71,7 +71,7 @@ let perdeu = () => {
   iniciar();
 }
 let iniciar = () => {
-  alert('Seja Bem vindo!, Vamos começar!');
+  alert('Seja bem-vindo! Vamos começar!');
   gerarOrdem();
 }
 
