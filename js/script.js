@@ -35,7 +35,6 @@ let compararOrdem = ()=>{
       }
   };
   if(ordemClicada.length == ordem.length){
-    alert("Parabéns! Vamos continuar!");
     gerarOrdem();
   }
 };
@@ -68,6 +67,7 @@ let perdeu = () => {
   alert('Não foi dessa vez, tente novamente.');
   ordem = [];
   ordemClicada = [];
+  parar();
 }
 
 let iniciar = () => {
